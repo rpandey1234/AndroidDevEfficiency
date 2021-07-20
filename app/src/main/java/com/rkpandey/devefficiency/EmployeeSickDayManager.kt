@@ -6,34 +6,31 @@ private const val TAG = "EmployeeSickDayManager"
 
 class EmployeeSickDayManager : EmployeeManager() {
     // Refactor to correct the spelling of this variable
-    var sikDays: Int
+    var sickDays: Int
+
     init {
         // Use multiple cursors to change the log level
-                        Log.e(TAG, "constructing EmployeeSickDayManager")
-        sikDays = 0
+        Log.i(TAG, "constructing EmployeeSickDayManager")
+        sickDays = 0
     }
 
     fun addSickDays(days: Int) {
-Log.e(TAG, "addSickDays $days")
-                                sikDays += days
-        Log.e(TAG, "Finished the body of the function addSickDays")
+        Log.i(TAG, "addSickDays $days")
+        sickDays += days
+        Log.i(TAG, "Finished the body of the function addSickDays")
     }
 
     fun subtractSickDays(days: Int) {
-        Log.e(TAG, "subtractSickDays $days")
-        sikDays -= days
+        Log.i(TAG, "subtractSickDays $days")
+        sickDays -= days
     }
 
-    fun veryLongMethodNameWithManyParameters
-
-                (
-                          param1: String, employeeId: Int,
+    fun veryLongMethodNameWithManyParameters(
+        param1: String, employeeId: Int,
         level: Int,
         manager: Employee
-    )
-
-
-    {}
+    ) {
+    }
 
     fun wrongMethod() {}
 

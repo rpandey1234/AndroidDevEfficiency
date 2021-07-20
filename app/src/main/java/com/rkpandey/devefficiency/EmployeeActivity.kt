@@ -2,6 +2,7 @@ package com.rkpandey.devefficiency
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 private const val TAG = "EmployeeActivity"
 class EmployeeActivity : AppCompatActivity() {
@@ -24,11 +25,15 @@ class EmployeeActivity : AppCompatActivity() {
         Log.i(TAG, "Created new employee")
 
         // Save the employee name in a local variable
-        employee.fullName()
-
-        // Define method which takes in employee name and id
+        val fullName = employee.fullName()
 
         val sickDayManager = EmployeeSickDayManager()
-        sickDayManager.wrongMethod()
+        sickDayManager.rightMethod()
+        // Define method which takes in employee name and id
+        myMethod(fullName, employee.employeeId)
+    }
+
+    private fun myMethod(fullName: String, employeeId: Int) {
+
     }
 }
