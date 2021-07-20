@@ -20,16 +20,16 @@ class MainActivity : AppCompatActivity() {
         tvDesserts = findViewById(R.id.tvDesserts)
         btnSubmit = findViewById(R.id.btnSubmit)
 
-        val dessert = etDessertInput.text.toString()
         btnSubmit.setOnClickListener {
+            val dessert = etDessertInput.text.toString()
             Log.i(TAG, "onClick")
             val currentDesserts = tvDesserts.text.toString()
             if (currentDesserts.isEmpty()) {
                 Log.i(TAG, "currentDesserts is empty")
-                tvDesserts.setText(dessert)
+                tvDesserts.text = dessert
             } else {
                 Log.i(TAG, "There is content in the text view")
-                tvDesserts.setText(currentDesserts + ", " + dessert)
+                tvDesserts.text = currentDesserts + ", " + dessert
             }
             etDessertInput.setText("")
         }
